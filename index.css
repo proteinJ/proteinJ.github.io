@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Roboto', sans-serif;
     /* Arial */
@@ -86,9 +85,35 @@ p {
     unicode-bidi: isolate;
 }
 
+/* 모바일 화면 */
 @media screen and (max-width: 960px) {
     .big-paragraph {
         font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 2rem; 
+    }
+
+    /* row-left와 row-right 간격 좁히기 */
+    .row {
+        flex-direction: column; /* 세로로 배치하여 간격 좁힘 */
+        padding: 1rem 0; 
+        align-items: flex-start; 
+    }
+
+    .row-left {
+        font-size: 16px;
+        flex-basis: 100%;
+        padding-right: 0; 
+        margin-bottom: 0.1rem; 
+        max-height: 40px;
+    }
+
+    .row-right {
+        flex-grow: 1;
+        width: 100%; 
+        margin-top: 0.5rem; /* 간격이 너무 넓어지지 않도록 위쪽 마진 추가 */
     }
 }
 
